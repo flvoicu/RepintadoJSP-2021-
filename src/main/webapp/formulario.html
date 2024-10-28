@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript" src="js/funciones.js"></script>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<h1>Formulario</h1>
+
+<form action="Repintar" method="post">
+
+	  <span class="negrita">Tipo de Repintado</span>
+	  <input type="radio" name="tipo" id="rep" value="JSP"/>JSP
+	  <input type="radio" name="tipo" id="rep" value="JSTL"/>JSTL
+	  <br>
+	
+	  <span class= "rojo">*</span><span class="negrita">Nombre</span> 
+	  <input type="text" class="texto" name="nombre" value=""/> 
+	  <br>
+	  
+	  <input type = "hidden" name = "oculto" value="3.1416"/>
+	  
+	  <span class= "rojo">*</span><span class="negrita">Clave</span> 
+	  <input type="password" class="texto" name="clave" value=""/> 
+	  <br>
+	  
+	  <span class= "rojo">*</span><span class="negrita">Fecha de nacimiento</span>
+	  <input type="text" class="texto" name="fechNac" placeholder="dd/mm/aaaa"/> 
+	  <br>
+	  
+	  <span class= "rojo">*</span><span class="negrita">Edad</span> 
+	  <input type="text" class="texto" name="edad" value=""/> 
+	  <br>
+	  
+	  <span class= "rojo">*</span><span class="negrita">Género</span>
+	  <input type="radio" name="sexo" id="sexo" value="h"/>Hombre
+	  <input type="radio" name="sexo" id="sexo" value="m"/>Mujer
+	  <input type="radio" name="sexo" id="sexo" value="o"/>Otro
+	  <br>
+	  <input type="button" name="deseleccionaRadio"	onclick="deSelectSexo();" value="Deseleccionar género" />
+	  <br>
+	
+	  <span class= "rojo">*</span><span class="negrita">País</span>
+	  <select name="pais">
+	  	<option>Andorra</option>
+	  	<option>España</option>
+	    <option>Portugal</option>
+	  </select>
+	  <br>
+	  
+	  <span class= "rojo">*</span><span class="negrita">Aficiones</span>
+	  <input type="checkbox" name="aficiones" id="aficiones" value="C"/>Cine
+	  <input type="checkbox" name="aficiones" id="aficiones" value="D"/>Deporte
+	  <input type="checkbox" name="aficiones" id="aficiones" value="L"/>Lectura
+	  <input type="checkbox" name="aficiones" id="aficiones" value="M"/>Música
+	  <br>
+	  <input type="button" onclick="selectAficiones();" value="Seleccionar todas las aficiones" />
+	  <input type="button" onclick="deSelectAficiones();" value="Deseleccionar las aficiones" />
+	  <br>
+	   
+	  <span class= "rojo">*</span><span class="negrita">Música favorita</span>
+	  <br>
+	  <select name="musicas" id="musicas" size="5" multiple="multiple">
+	    <option name="musica" value="E">Electrónica</option>
+	    <option name="musica" value="F">Funk</option>
+	    <option name="musica" value="N">New age</option>
+	    <option name="musica" value="P">Pop</option>
+	    <option name="musica"value="R">Rock</option>
+	  </select>
+	  <br>
+	  <input type="button" onclick="selectMusica();" value="Seleccionar todas las músicas" />
+	  <input type="button" onclick="deSelectMusica();" value="Deseleccionar las músicas" />
+	  <br>
+	  
+	  <span class="negrita">Comentarios</span><br>
+	  <textarea name="comentario" class="texto" rows="5" cols="25" value=""></textarea>
+	  <br>
+		
+	  <input type="reset" value="Resetear formulario" />
+	  <input type="button" onclick="limpiar()" value="Limpiar todos los campos"/>
+	  <input type="submit" value="Enviar formulario" />
+	  <br>
+	  <input type="image" src="img/enviar.jpg" alt="Enviar formulario" width="100" height="100" />
+	  
+</form>
+</body>
+</html>
